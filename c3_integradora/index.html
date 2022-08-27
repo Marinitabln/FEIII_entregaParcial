@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using React</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    const johnny =
+    {
+    avatar: "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTHFBuj3hbauPEwXCXLDQ4RmTsDNdPAMCCJHfeIJGcm_ufKkEtoCbZDhB_ZbkG_wSA_",
+     name:"Johnny",
+     lastName: "Depp",
+     age: 48,
+     nationality:"Norteamericano",
+     experienceInMovies:["Piratas del Caribe", "Johnny manos de tijera", "Transcendental" ],
+     education: ["University of Arts", "University of UCLA"],
+     bio:"Es un actor, productor de cine y músico estadounidense. Ha sido nominado en tres ocasiones al Óscar y recibió un Globo de Oro, un premio del Sindicato de Actores y un César.Comenzó su carrera en la película de terror A Nightmare on Elm Street de 1984 como Glen Lantz, una de las víctimas de Freddy Krueger. Dos años después, en 1986, tuvo un papel de reparto en Platoon dirigido por Oliver Stone. Su papel de Tom Hanson en la serie de televisión 21 Jump Street lo convirtió en un ídolo adolescente. Mientras trabajaba en esta, Depp actuó en la película Edward Scissorhands, que le valió su primera nominación al Globo de Oro y reconocimiento por parte de la crítica. Posteriormente protagonizó la mayoría de las películas en las que trabajó, entre ellas Sleepy Hollow (1999), Pirates of the Caribbean: The Curse of the Black Pearl (2003) y sus respectivas secuelas, Charlie y la fábrica de chocolate (2005), Sweeney Todd: The Demon Barber of Fleet Street (2008), Alicia en el país de las maravillas (2010) y su secuela Alicia a través del espejo (2016), Animales fantásticos y donde encontrarlos (2016) y su secuela Animales fantásticos: Los crímenes de Grindelwald (2018), entre otras."
+    }
+    
+
+
+    const Header = (props) => {
+        return (
+        <header className="encabezado">
+            <nav>
+                <ul className="menu">
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li>CAREER</li>
+                    <li>EDUCATION</li>
+                </ul>
+            </nav>
+        </header>
+      )
+    }
+
+    const Card = (props) => {
+      return (
+          <div className="card">
+             <div className="imagen">
+                <img src={johnny.avatar} alt={johnny.name} />
+            </div>
+            <div className="info">
+              <h4>Personal Information</h4>
+              <ul>
+                <li>Name: {johnny.name + " " + johnny.lastName}</li>
+                <li>Age: {johnny.age}</li>
+                <li>Nationality: {johnny.nationality}</li>
+                <li>Experience in movies: 
+                    <ul>
+                        <li>{johnny.experienceInMovies[0]}</li>
+                        <li>{johnny.experienceInMovies[1]}</li>
+                        <li>{johnny.experienceInMovies[2]}</li>
+                        </ul>
+                    </li>
+                <li>Education: {johnny.education}</li>
+             </ul>
+             <p>{johnny.bio}</p>
+            </div>
+          </div>
+      )
+    } 
+
+    const Main = (props) =>{
+      return (
+          <main>
+              <Card />
+        </main>
+      )
+    }
+
+    let li = <li>algo</li>;
+
+    const Footer = () =>{
+      return (
+          <footer>
+              
+          </footer>
+      )
+    }
+
+    const App = (
+        <div>
+          <Header />
+          <Main props={johnny} />
+        </div>
+    )
+
+    const app = document.getElementById("root");
+    const root = ReactDOM.createRoot(app)
+    root.render(App)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%; /**/
+  }
+  
+  .encabezado {
+    color: white;
+    background-color: crimson;
+    height: 10vh;
+    width: 100%;
+  }
+  .menu {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+  }
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem auto;
+    text-align: left;
+  }
+  .card .imagen{
+    width: 35%;
+  }
+  .card .info{
+    width: 55%;
+    font-size: 16px;
+  }
+  
+  .card h4 {
+    text-align: left;
+  }
+
+.imagen img {
+    border-radius: 50%;
+    height: 150px; 
+    width: 150px;  
+  }
+
+ul {
+   list-style:none;
+}

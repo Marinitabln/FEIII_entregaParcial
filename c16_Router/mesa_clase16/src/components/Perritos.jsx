@@ -3,7 +3,7 @@ import React from "react";
 const Perritos = () => {
   return (
     <div>
-      <h1>Muchos guauguaaaas! 🐕🐕🐕🐕🐕🐕🐕</h1>
+      <h1>Muchos guauguaus! 🐕🐕🐕🐕🐕🐕🐕</h1>
     </div>
   );
 };

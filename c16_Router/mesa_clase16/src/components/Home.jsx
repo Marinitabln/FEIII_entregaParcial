@@ -23,8 +23,8 @@ const Home = ({ perritos, gatitos }) => {
         <h1>⭐⭐ Tenemos ⭐⭐</h1>
       </div>
       <Routes>
-        <Route path="/perritos" element={<Perritos />} />
-        <Route path="/gatitos" element={<Gatitos />} />
+        <Route path="/perritos" element={perritos} />
+        <Route path="/gatitos" element={gatitos} />
       </Routes>
     </>
   );

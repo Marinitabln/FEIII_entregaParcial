@@ -19,11 +19,4 @@ function App() {
 
 export default App;
 
-{
-  /* <Router history={browserHistory}>
-<Route path="/" component={Home}>
-  <Route path="/perritos" component={Perritos} />
-  <Route path="/gatitos" component={Gatitos} />
-</Route>
-</Router> */
-}
+

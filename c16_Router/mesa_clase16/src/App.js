@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home perritos={<Perritos />} gatitos={<Gatitos />}/>}>
           <Route path="/perritos" element={<Perritos />} />
           <Route path="/gatitos" element={<Gatitos />} />
+          <Route path="*" element={<Error/>} />
         </Route>
       </Routes>
     </BrowserRouter>
